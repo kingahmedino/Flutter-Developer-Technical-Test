@@ -88,12 +88,14 @@ class HomeScreen extends StatelessWidget {
                             context,
                             text: 'NOUNS HUNT',
                             backgroundPath: 'assets/gray_scaled.png',
+                            isLocked: true,
                           ),
                           const SizedBox(height: 32),
                           _buildIconButton(
                             context,
                             label: 'CHARACTERS',
                             iconPath: 'assets/Icon_ColorIcon_Emoji.Png',
+                            isLocked: true,
                           ),
                         ],
                       ),
@@ -109,6 +111,7 @@ class HomeScreen extends StatelessWidget {
                             context,
                             label: 'ACHIEVEMENTS',
                             iconPath: 'assets/Icon_ColorIcon_Trophy01.png',
+                            isLocked: true,
                           ),
                         ],
                       ),
@@ -269,26 +272,44 @@ class HomeScreen extends StatelessWidget {
     BuildContext context, {
     required String text,
     required String backgroundPath,
+    bool isLocked = false,
   }) {
-    return Container(
-      width: 150,
-      height: 58,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(backgroundPath),
-          fit: BoxFit.fill,
-        ),
-      ),
-      child: TextButton(
-        onPressed: () {},
-        child: Text(
-          text,
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
+    return Stack(
+      children: [
+        Column(
+          children: [
+            Container(
+              width: 150,
+              height: 58,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(backgroundPath),
+                  fit: BoxFit.fill,
+                ),
               ),
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  text,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+          ],
         ),
-      ),
+        if (isLocked) ...{
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child: Image.asset('assets/Icon_ColorIcon_Lock01.png',
+                width: 20, height: 20),
+          ),
+        }
+      ],
     );
   }
 
@@ -296,33 +317,46 @@ class HomeScreen extends StatelessWidget {
     BuildContext context, {
     required String label,
     required String iconPath,
+    bool isLocked = false,
   }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 18),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 4,
-            offset: Offset(0, 2),
+    return Stack(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 18),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 4,
+                offset: Offset(0, 2),
+              ),
+            ],
           ),
-        ],
-      ),
-      child: Column(
-        children: [
-          Image.asset(iconPath, width: 48, height: 48),
-          const SizedBox(height: 8),
-          Text(
-            label,
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall
-                ?.copyWith(fontSize: 6, fontWeight: FontWeight.w500),
+          child: Column(
+            children: [
+              Image.asset(iconPath, width: 48, height: 48),
+              const SizedBox(height: 8),
+              Text(
+                label,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(fontSize: 6, fontWeight: FontWeight.w500),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        if (isLocked) ...{
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child: Image.asset('assets/Icon_ColorIcon_Lock01.png',
+                width: 20, height: 20),
+          ),
+        }
+      ],
     );
   }
 }
