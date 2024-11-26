@@ -1,6 +1,10 @@
 # Flutter Developer Technical Test
 
-For this test, we just expect you to implement Nouns Hunt's Splash Screen > main menu sequence.
+## Instructions
+
+Create a fork of this repository, implement your solution, push it to github and send us the link via email.
+
+For this test, we just expect you to implement Nouns Hunt's SplashScreen >> MainMenu sequence.
 Here is a video for reference -
 [reference.mp4](reference.mp4)
 
@@ -24,4 +28,4 @@ We will be checking out for the following:
 
 Also, to help us get a feel of how you work, be sure to make increamental git commits as you move. We will be checking the git history to understand your process.
 
-You are free to show off your creativity in any way you like but also adhere to the reference we have provided. All assets needed are provided in the assets folder. Also, this is meant to be a test easy enough to finish in a couple of hours but also challenging enough to show off your skills.
+You are free to show off your creativity in any way you like but it is important that you adhere to the reference we have provided. All assets needed are provided in the assets folder. Also, this is meant to be a test easy enough to finish in a couple of hours but also challenging enough to show off your skills. So keep it simple, but show off what you need to show off.
