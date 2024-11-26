@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Create a fork of this repository, implement your solution, push it to github and send us the link via email.
+Create a fork of this repository, implement your solution, push it to github and send us the link via email. Send it this address [bokat.mom@dashstudios.tech](mailto:bokat.mom@dashstudios.tech)
 
 For this test, we just expect you to implement Nouns Hunt's SplashScreen >> MainMenu sequence.
 Here is a video for reference -
