@@ -40,13 +40,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
-                Hero(
-                  tag: 'nouns_hunt_logo',
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                    child: Image.asset(
-                      'assets/images/nouns_logo.png',
-                    ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                  child: Image.asset(
+                    'assets/images/nouns_logo.png',
                   ),
                 ),
                 const Spacer(),
