@@ -24,4 +24,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/images/
+    - assets/videos/
+
+  fonts:
+    - family: Vanilla Extract
+      fonts:
+        - asset: assets/fonts/VanillaExtractRegular.ttf

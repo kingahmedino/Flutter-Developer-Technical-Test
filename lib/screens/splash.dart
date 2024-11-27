@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/superman_dexter.jpg',
+              'assets/images/superman_dexter.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -92,13 +92,13 @@ class _SplashScreenState extends State<SplashScreen>
                     child: Hero(
                       tag: 'nouns_hunt_logo',
                       child: Image.asset(
-                        'assets/nouns_green.png',
+                        'assets/images/nouns_green.png',
                         width: 200,
                       ),
                     ),
                   ),
                   Text(
-                    'Game and Software © Dash Studios. Dash Studios\nand its Logo are a trademark of Dash Studios.',
+                    'Game and Software © Dash Studios. Dash Studios and its Logo are a trademark of Dash Studios.',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

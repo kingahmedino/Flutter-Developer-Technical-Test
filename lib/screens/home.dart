@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/main_menu_bg.png',
+              'assets/images/main_menu_bg.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -25,14 +25,14 @@ class HomeScreen extends StatelessWidget {
                       const Spacer(),
                       _buildStatItem(
                         context,
-                        iconPath: 'assets/dash_coins.png',
+                        iconPath: 'assets/images/dash_coins.png',
                         value: '4730',
                         accentColor: const Color(0xFFFFA726),
                       ),
                       const SizedBox(width: 8),
                       _buildStatItem(
                         context,
-                        iconPath: 'assets/nouns_pencil.png',
+                        iconPath: 'assets/images/nouns_pencil.png',
                         value: '8',
                         accentColor: Colors.blue,
                       ),
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                 Hero(
                   tag: 'nouns_hunt_logo',
                   child: Image.asset(
-                    'assets/nouns_green.png',
+                    'assets/images/nouns_green.png',
                     width: 200,
                   ),
                 ),
@@ -59,13 +59,14 @@ class HomeScreen extends StatelessWidget {
                           _buildIconButton(
                             context,
                             label: 'RANKING',
-                            iconPath: 'assets/IconGroup_MenuIcon02_Ranking.png',
+                            iconPath:
+                                'assets/images/IconGroup_MenuIcon02_Ranking.png',
                           ),
                           const SizedBox(height: 36),
                           _buildIconButton(
                             context,
                             label: 'STORE',
-                            iconPath: 'assets/itemicon_home_shop_0.png',
+                            iconPath: 'assets/images/itemicon_home_shop_0.png',
                           ),
                         ],
                       ),
@@ -75,26 +76,26 @@ class HomeScreen extends StatelessWidget {
                           _buildButton(
                             context,
                             text: 'PLAY',
-                            backgroundPath: 'assets/green_scaled.png',
+                            backgroundPath: 'assets/images/green_scaled.png',
                           ),
                           const SizedBox(height: 16),
                           _buildButton(
                             context,
                             text: 'SPEED RUN',
-                            backgroundPath: 'assets/purple_scaled.png',
+                            backgroundPath: 'assets/images/purple_scaled.png',
                           ),
                           const SizedBox(height: 16),
                           _buildButton(
                             context,
                             text: 'NOUNS HUNT',
-                            backgroundPath: 'assets/gray_scaled.png',
+                            backgroundPath: 'assets/images/gray_scaled.png',
                             isLocked: true,
                           ),
                           const SizedBox(height: 32),
                           _buildIconButton(
                             context,
                             label: 'CHARACTERS',
-                            iconPath: 'assets/Icon_ColorIcon_Emoji.Png',
+                            iconPath: 'assets/images/Icon_ColorIcon_Emoji.Png',
                             isLocked: true,
                           ),
                         ],
@@ -104,13 +105,15 @@ class HomeScreen extends StatelessWidget {
                           _buildIconButton(
                             context,
                             label: 'RULES',
-                            iconPath: 'assets/Icon_ColorIcon_Scroll_l.png',
+                            iconPath:
+                                'assets/images/Icon_ColorIcon_Scroll_l.png',
                           ),
                           const SizedBox(height: 36),
                           _buildIconButton(
                             context,
                             label: 'ACHIEVEMENTS',
-                            iconPath: 'assets/Icon_ColorIcon_Trophy01.png',
+                            iconPath:
+                                'assets/images/Icon_ColorIcon_Trophy01.png',
                             isLocked: true,
                           ),
                         ],
@@ -184,7 +187,7 @@ class HomeScreen extends StatelessWidget {
               radius: 29,
               backgroundColor: Colors.white,
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/6.png'),
+                backgroundImage: AssetImage('assets/images/6.png'),
                 radius: 28,
               ),
             ),
@@ -312,7 +315,7 @@ class HomeScreen extends StatelessWidget {
           Positioned(
             right: 0,
             bottom: 0,
-            child: Image.asset('assets/Icon_ColorIcon_Lock01.png',
+            child: Image.asset('assets/images/Icon_ColorIcon_Lock01.png',
                 width: 20, height: 20),
           ),
         }
@@ -359,7 +362,7 @@ class HomeScreen extends StatelessWidget {
           Positioned(
             right: 0,
             bottom: 0,
-            child: Image.asset('assets/Icon_ColorIcon_Lock01.png',
+            child: Image.asset('assets/images/Icon_ColorIcon_Lock01.png',
                 width: 20, height: 20),
           ),
         }

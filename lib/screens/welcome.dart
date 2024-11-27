@@ -16,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/dash.mp4')
+    _controller = VideoPlayerController.asset('assets/videos/dash.mp4')
       ..initialize().then((_) {
         setState(() {
           _isVideoInitialized = true;
