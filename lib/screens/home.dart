@@ -42,9 +42,11 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 32),
                 Hero(
                   tag: 'nouns_hunt_logo',
-                  child: Image.asset(
-                    'assets/images/nouns_green.png',
-                    width: 200,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                    child: Image.asset(
+                      'assets/images/nouns_logo.png',
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -76,12 +78,14 @@ class HomeScreen extends StatelessWidget {
                           _buildButton(
                             context,
                             text: 'PLAY',
+                            textColor: const Color(0xFF3C805E),
                             backgroundPath: 'assets/images/green_scaled.png',
                           ),
                           const SizedBox(height: 16),
                           _buildButton(
                             context,
                             text: 'SPEED RUN',
+                            textColor: const Color(0xFF490D61),
                             backgroundPath: 'assets/images/purple_scaled.png',
                           ),
                           const SizedBox(height: 16),
@@ -89,6 +93,7 @@ class HomeScreen extends StatelessWidget {
                             context,
                             text: 'NOUNS HUNT',
                             backgroundPath: 'assets/images/gray_scaled.png',
+                            textColor: const Color(0xFF747474),
                             isLocked: true,
                           ),
                           const SizedBox(height: 32),
@@ -154,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.w500,
-                          fontSize: 8,
+                          fontSize: 6,
                         ),
                   ),
                 ),
@@ -172,8 +177,8 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     'gndirangu',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 8,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 6,
                         ),
                   ),
                 ),
@@ -248,7 +253,7 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     value,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          fontSize: 10,
+                          fontSize: 8,
                           fontWeight: FontWeight.bold,
                           color: accentColor,
                         ),
@@ -275,6 +280,7 @@ class HomeScreen extends StatelessWidget {
     BuildContext context, {
     required String text,
     required String backgroundPath,
+    required Color textColor,
     bool isLocked = false,
   }) {
     return Stack(
@@ -302,7 +308,7 @@ class HomeScreen extends StatelessWidget {
                 child: Text(
                   text,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: Colors.black87,
+                        color: textColor,
                         fontWeight: FontWeight.bold,
                       ),
                 ),
@@ -350,10 +356,11 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 label,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall
-                    ?.copyWith(fontSize: 6, fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      fontSize: 6,
+                      color: const Color(0xFF747474),
+                      fontWeight: FontWeight.w500,
+                    ),
               ),
             ],
           ),

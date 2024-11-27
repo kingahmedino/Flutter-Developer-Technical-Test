@@ -91,9 +91,11 @@ class _SplashScreenState extends State<SplashScreen>
                     },
                     child: Hero(
                       tag: 'nouns_hunt_logo',
-                      child: Image.asset(
-                        'assets/images/nouns_green.png',
-                        width: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                        child: Image.asset(
+                          'assets/images/nouns_logo.png',
+                        ),
                       ),
                     ),
                   ),
