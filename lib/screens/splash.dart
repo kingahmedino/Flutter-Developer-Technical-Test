@@ -76,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen>
         setState(() => _showLoading = true);
         _slideController.forward().then((_) {
           // Add delay to simulate making an API call, while showing the loader
-          Future.delayed(const Duration(seconds: 1), () {
+          Future.delayed(const Duration(milliseconds: 500), () {
             if (!mounted) return;
             Navigator.pushReplacement(
               context,
