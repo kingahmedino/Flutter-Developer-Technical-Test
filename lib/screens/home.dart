@@ -286,6 +286,13 @@ class HomeScreen extends StatelessWidget {
                   image: AssetImage(backgroundPath),
                   fit: BoxFit.fill,
                 ),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black26,
+                    blurRadius: 14,
+                    offset: Offset(0, 7),
+                  ),
+                ],
               ),
               child: TextButton(
                 onPressed: () {},
